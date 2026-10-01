@@ -1,0 +1,582 @@
+:root {
+    --museeve-burgundy: #441213;
+    --museeve-burgundy-dark: #300b0d;
+    --museeve-gold: #b5a04a;
+    --museeve-gold-dark: #8f7d35;
+    --museeve-cream: #f4ebdd;
+    --museeve-paper: #fbf8f2;
+    --museeve-border: #d8ccbb;
+    --museeve-text: #241718;
+    --museeve-muted: #74686a;
+    --museeve-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--museeve-cream);
+    color: var(--museeve-text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+.navbar {
+    height: 78px;
+    padding: 0 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--museeve-burgundy);
+    color: var(--museeve-cream);
+
+    border-bottom: 1px solid rgba(181, 160, 74, 0.25);
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    letter-spacing: -1.5px;
+    font-weight: 600;
+
+    color: var(--museeve-gold);
+}
+
+.logo-img {
+    display: block;
+    width: 105px;
+    height: 45px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0;
+}
+
+.back-link {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: var(--museeve-cream);
+
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--museeve-gold);
+}
+
+.back-arrow {
+    font-size: 18px;
+}
+
+.job-hero {
+    padding: 85px 5vw 75px;
+
+    background: var(--museeve-burgundy);
+    color: var(--museeve-cream);
+
+    border-bottom: 1px solid rgba(181, 160, 74, 0.25);
+}
+
+.job-hero-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+
+    color: var(--museeve-gold);
+
+    margin-bottom: 22px;
+}
+
+.job-title {
+    max-width: 950px;
+
+    font-size: clamp(46px, 7vw, 92px);
+    line-height: 0.95;
+
+    font-weight: 400;
+    letter-spacing: -0.065em;
+
+    color: var(--museeve-cream);
+
+    margin-bottom: 38px;
+}
+
+.job-company {
+    font-size: 18px;
+    color: var(--museeve-gold);
+    margin-bottom: 30px;
+}
+
+.job-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.meta-item {
+    border: 1px solid rgba(181, 160, 74, 0.45);
+
+    padding: 10px 15px;
+
+    font-size: 12px;
+
+    color: var(--museeve-cream);
+
+    background: rgba(181, 160, 74, 0.06);
+}
+
+
+.main-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    padding: 70px 5vw 120px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 80px;
+
+    align-items: start;
+
+    background: var(--museeve-cream);
+}
+
+
+.job-description {
+    max-width: 850px;
+}
+
+.description-section {
+    margin-bottom: 65px;
+}
+
+.description-section:last-child {
+    margin-bottom: 0;
+}
+
+.section-label {
+    font-size: 10px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.17em;
+
+    color: var(--museeve-gold-dark);
+
+    margin-bottom: 20px;
+}
+
+.description-section h2 {
+    font-size: clamp(30px, 4vw, 48px);
+
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+
+    font-weight: 400;
+
+    color: var(--museeve-burgundy);
+
+    margin-bottom: 24px;
+}
+
+.description-section p {
+    font-size: 17px;
+    line-height: 1.8;
+
+    max-width: 760px;
+
+    color: var(--museeve-text);
+
+    margin-bottom: 20px;
+}
+
+.description-section ul {
+    list-style: none;
+    margin-top: 25px;
+}
+
+.description-section li {
+    position: relative;
+
+    padding: 14px 0 14px 27px;
+
+    border-bottom: 1px solid var(--museeve-border);
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.description-section li::before {
+    content: "—";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--museeve-gold-dark);
+}
+
+.sidebar {
+    position: sticky;
+    top: 110px;
+}
+
+.apply-card {
+    background: var(--museeve-burgundy);
+
+    color: var(--museeve-cream);
+
+    padding: 30px;
+
+    border: 1px solid var(--museeve-burgundy-dark);
+}
+
+.apply-card h3 {
+    font-size: 27px;
+    line-height: 1.1;
+
+    font-weight: 400;
+    letter-spacing: -0.03em;
+
+    color: var(--museeve-cream);
+
+    margin-bottom: 25px;
+}
+
+.apply-button {
+    width: 100%;
+
+    border: none;
+
+    background: var(--museeve-gold);
+    color: var(--museeve-burgundy);
+
+    padding: 17px 20px;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.apply-button:hover {
+    background: #c5b35d;
+    transform: translateY(-1px);
+}
+
+.job-summary {
+    margin-top: 25px;
+
+    border: 1px solid var(--museeve-border);
+
+    background: var(--museeve-paper);
+}
+
+.summary-item {
+    padding: 19px;
+    border-bottom: 1px solid var(--museeve-border);
+}
+
+.summary-item:last-child {
+    border-bottom: none;
+}
+
+.summary-label {
+    display: block;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+
+    color: var(--museeve-gold-dark);
+
+    margin-bottom: 5px;
+}
+
+.summary-value {
+    font-size: 14px;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.application-modal {
+    width: min(720px, 100%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: var(--museeve-cream);
+    color: var(--museeve-text);
+
+    padding: 42px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 35px;
+}
+
+.modal-header h2 {
+    font-size: 42px;
+
+    line-height: 1;
+
+    letter-spacing: -0.05em;
+
+    font-weight: 400;
+
+    color: var(--museeve-burgundy);
+}
+
+.close-modal {
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    font-size: 25px;
+    line-height: 1;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.13em;
+
+    margin-bottom: 9px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid var(--museeve-border);
+    background: var(--museeve-paper);
+
+    padding: 14px 15px;
+
+    outline: none;
+    color: var(--museeve-black);
+
+    transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--museeve-gold-dark);
+    box-shadow: 0 0 0 1px var(--museeve-gold-dark);
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.file-input {
+    padding: 25px 15px !important;
+    border-style: dashed !important;
+}
+
+.submit-application {
+    width: 100%;
+
+    margin-top: 10px;
+
+    border: none;
+
+    background: var(--museeve-burgundy);
+    color: var(--museeve-cream);
+
+    padding: 17px;
+
+    cursor: pointer;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition: background 0.2s ease;
+}
+
+.submit-application:hover {
+    background: var(--museeve-burgundy-dark);
+}
+
+footer {
+    background: var(--museeve-burgundy);
+    color: var(--museeve-cream);
+
+    padding: 50px 5vw;
+}
+
+.footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-logo {
+    font-size: 28px;
+    letter-spacing: -1.5px;
+
+    color: var(--museeve-gold);
+}
+
+.footer-tagline {
+    font-size: 12px;
+
+    color: rgba(244, 235, 221, 0.65);
+
+    margin-top: 8px;
+}
+
+.footer-copy {
+    font-size: 11px;
+    color: #aaa59b;
+}
+
+@media (max-width: 900px) {
+    .main-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .job-description {
+        max-width: none;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .apply-card {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        height: 68px;
+        padding: 0 22px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .job-hero {
+        padding: 55px 22px 45px;
+    }
+
+    .job-title {
+        font-size: 52px;
+    }
+
+    .main-wrapper {
+        padding: 50px 22px 80px;
+    }
+
+    .description-section {
+        margin-bottom: 50px;
+    }
+
+    .description-section p {
+        font-size: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .application-modal {
+        padding: 28px 22px;
+    }
+
+    .modal-header h2 {
+        font-size: 35px;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 35px;
+    }
+}
